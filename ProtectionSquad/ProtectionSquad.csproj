@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{55E7F8EF-C3C0-47A6-B79E-ACE9E02A5D4F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Protection_Squad</RootNamespace>
+    <AssemblyName>ProtectionSquad</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LSPD\u0020First\u0020Response" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="RAGENativeUI" />
+    <Reference Include="RagePluginHook" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Backup.cs" />
+    <Compile Include="Callouts\Airport_to_Arcadius_Center.cs" />
+    <Compile Include="Callouts\Airport_to_Noose_HQ.cs" />
+    <Compile Include="Callouts\Airport_to_Observatory.cs" />
+    <Compile Include="Callouts\Airport_to_Union_Depository.cs" />
+    <Compile Include="Callouts\Ambulance_Escort_Bollingbrook_to_Davis.cs" />
+    <Compile Include="Callouts\Arcadius_Center_to_Golf_Club.cs" />
+    <Compile Include="Callouts\EMaze_Bank_to_Noose_HQ.cs" />
+    <Compile Include="Callouts\Kortz_Center_to_Maze_Bank.cs" />
+    <Compile Include="Callouts\Kortz_Center_to_Observatory.cs" />
+    <Compile Include="Callouts\Maze_Bank_to_Airport.cs" />
+    <Compile Include="Callouts\Noose_HQ_To_Maze_Bank.cs" />
+    <Compile Include="Callouts\Observatory_to_Richards_Majestic.cs" />
+    <Compile Include="Callouts\Prisoner_Transport_Vespucci_to_Bollingbrook.cs" />
+    <Compile Include="Callouts\Union_Depository_to_Golf_Club.cs" />
+    <Compile Include="Custom\CustomMission.cs" />
+    <Compile Include="Custom\CustomVehicle.cs" />
+    <Compile Include="EManager.cs" />
+    <Compile Include="IniFile.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Map.cs" />
+    <Compile Include="PCALL_Manager.cs" />
+    <Compile Include="Positions\ArcadiusCenter.cs" />
+    <Compile Include="Positions\Bolingbroke_EMS.cs" />
+    <Compile Include="Positions\DavisHospital_EMS.cs" />
+    <Compile Include="Positions\GalileoObservatory.cs" />
+    <Compile Include="Positions\GolfClub.cs" />
+    <Compile Include="Positions\Jails\Bolingbroke.cs" />
+    <Compile Include="Positions\Jails\DowntownPolice_Bus.cs" />
+    <Compile Include="Positions\Jails\VespucciPolice.cs" />
+    <Compile Include="Positions\KortzCenter.cs" />
+    <Compile Include="Positions\LSAirport.cs" />
+    <Compile Include="Positions\MazeBank.cs" />
+    <Compile Include="Positions\NOOSEHeadquarters.cs" />
+    <Compile Include="Positions\RichardsMajesticStudio.cs" />
+    <Compile Include="Positions\UnionDepository.cs" />
+    <Compile Include="Positions\_example.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SCALL_Manager.cs" />
+    <Compile Include="UI.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
